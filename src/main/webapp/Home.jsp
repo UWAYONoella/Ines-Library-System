@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel ="stylesheet" type ="text/css" href="./Sytle.css">
-<title>Registration Form</title>
+<title>Ines Library System</title>
 </head>
 <body>
 <h1 style="text-align:center;">Please fill this form well to register</h1>
@@ -24,12 +24,12 @@
 	</tr>
 	
 	<tr>
-		<td>Password</td> <td><input type="password" name="password"></td>
+		<td>Password</td> <td><input type="password" name="password" required></td>
 	</tr>
 	
 </table>
 <div class" btn">
-<button type="submit">Register</button><br><br>
+<button type="submit" >Register</button><br><br>
 <p>Arleady have account?<a href="Login.jsp">Login here</a>
 </div>
 

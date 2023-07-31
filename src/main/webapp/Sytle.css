@@ -4,16 +4,13 @@
 	margin: 0;
 }
 body{
-	background-color: burlywood;
+	background-image: url(https://media.licdn.com/dms/image/C4D22AQHCLUcrM516rA/feedshare-shrink_800/0/1592050551995?e=2147483647&v=beta&t=7uGT3Lk9f9Jq8_DIayzawnUiI9X42VKI1eba5y6y5BA);
+	background-repeat: no-repeat;
 	height: 100%;
 	width: 100%;
+	position: fixed;
 }
-.nav-bar{
-	background-color: cadetblue;
-	width: 100%;
-	height: 50px;
-	margin-top: 1%;
-}
+
 .nav{
 	float: left;
 	padding-left: 1%;
@@ -23,23 +20,8 @@ body{
 	height: 20px;
 	margin-top: 3px;
 }
-.profile{
-	float: right;
-	padding-right: 2%;
-	margin-right: 1%;
-	padding-top: 1%;
-	width: 20%;
-	height: 20px;
-	margin-top: 3px;
-}
-
-.pages{
-	background-color:bisque;
-	width: 10%;
-	height: 500px;
-	
-	
-	padding: 2%;
+nav{
+	background-color: white;
 }
 form{
 	margin-left: 500px;

@@ -3,6 +3,7 @@ package com.Ines;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectDB {
@@ -51,5 +52,26 @@ public class ConnectDB {
 		return null;
 		
 	
+	}
+	public ResultSet getUser(Userlog user1) {
+		
+		ResultSet row=null;
+		
+		loadDriver();
+		Connection cnx =dbConnection();
+        String sql = "SELECT * FROM Users WHERE Username=? AND Password=?";
+        try {
+			PreparedStatement rs = cnx.prepareStatement(sql);
+			rs.setString(1, user1.getUsername());
+			rs.setString(2, user1.getPassword());
+			row=rs.executeQuery();
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+			System.err.println("No data found "+e.getMessage());
+		}
+
+		return row;
+		
 	}
 }
