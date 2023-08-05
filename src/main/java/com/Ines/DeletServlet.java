@@ -6,17 +6,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
- * Servlet implementation class create
+ * Servlet implementation class DeletServlet
  */
-public class create extends HttpServlet {
+public class DeletServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public create() {
+    public DeletServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,21 +34,24 @@ public class create extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String fname =request.getParameter("fname");
-		String email =request.getParameter("email");
-		String username=request.getParameter("username");
-		String role ="user";
-		String password =request.getParameter("password");
-		User user=new User(fname,email,username,role,password);
-		ConnectDB db =new ConnectDB();
-		db.dbConnection();
-		/* db.addUser(user); */
-		String rs= db.addUser(user);
 		
-			response.sendRedirect("Login.jsp");
-		
-			
+	            int bookID = Integer.parseInt(request.getParameter("id"));
+	            
+	            ConnectDB db = new ConnectDB();
+	            db.dbConnection();
+	            
+	            try {
+					db.deleteBook(bookID);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            
+	            db.dbConnection();
+	            
+	            // Redirect back to the book list page
+	            response.sendRedirect("bookList.jsp");
+	    
 	}
-	
 
 }

@@ -41,7 +41,7 @@ public class Logservlet extends HttpServlet {
 	Userlog user1=new Userlog(username,password);
 	ConnectDB db =new ConnectDB();
 	db.dbConnection();
-	db.getUser(user1);
+	/* db.getUser(user1); */
 	ResultSet rs= db.getUser(user1);
 	
 	try {

@@ -1,22 +1,24 @@
 package com.Ines;
 
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
- * Servlet implementation class create
+ * Servlet implementation class Bookservlet
  */
-public class create extends HttpServlet {
+public class Bookservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public create() {
+    public Bookservlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,21 +35,36 @@ public class create extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String fname =request.getParameter("fname");
-		String email =request.getParameter("email");
-		String username=request.getParameter("username");
-		String role ="user";
-		String password =request.getParameter("password");
-		User user=new User(fname,email,username,role,password);
+		String date =request.getParameter("date");
+		String name =request.getParameter("name");
+		String author=request.getParameter("author");
+		String type =request.getParameter("type");
+		Book book=new Book(date,name,author,type);
 		ConnectDB db =new ConnectDB();
 		db.dbConnection();
-		/* db.addUser(user); */
-		String rs= db.addUser(user);
+//		db.addBook(book);
+		String rs= db.addBook(book);
+		if(rs!=null) {
+			response.sendRedirect("Booklist.jsp");
+		}
 		
-			response.sendRedirect("Login.jsp");
 		
-			
-	}
+		ResultSet result=db.getAllBook();
 	
+			try {
+				while(result.next()) {
+					int bookID=result.getInt("ID");
+					String bookdate=result.getString("Date");
+					String bookname=result.getString("BookName");
+					String bookauthor=result.getString("BookAuthor");
+					String booktype=result.getString("BookType");
+				}
+			} catch (SQLException e) {
+	
+				e.printStackTrace();
+				System.out.println("No data Found !!"+e.getMessage());
+			}
+		
+	}
 
 }

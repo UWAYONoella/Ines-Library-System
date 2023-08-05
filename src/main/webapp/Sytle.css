@@ -4,8 +4,8 @@
 	margin: 0;
 }
 body{
-	background-image: url(https://media.licdn.com/dms/image/C4D22AQHCLUcrM516rA/feedshare-shrink_800/0/1592050551995?e=2147483647&v=beta&t=7uGT3Lk9f9Jq8_DIayzawnUiI9X42VKI1eba5y6y5BA);
-	background-repeat: no-repeat;
+	/*background-image: url(https://media.licdn.com/dms/image/C4D22AQHCLUcrM516rA/feedshare-shrink_800/0/1592050551995?e=2147483647&v=beta&t=7uGT3Lk9f9Jq8_DIayzawnUiI9X42VKI1eba5y6y5BA);
+	background-repeat: no-repeat;*/
 	height: 100%;
 	width: 100%;
 	position: fixed;

@@ -74,4 +74,93 @@ public class ConnectDB {
 		return row;
 		
 	}
+	public String addBook(Book user2) {
+		loadDriver();
+		Connection cnx =dbConnection();
+		String sql ="INSERT INTO Books (Date,BookName,BookAuthor,BookType) VALUES(?,?,?,?)";
+		try {
+			PreparedStatement rs =cnx.prepareStatement(sql);
+			rs.setString(1,user2.getDate());
+			rs.setString(2,user2.getName());
+			rs.setString(3,user2.getAuthor());
+			rs.setString(4,user2.getType());
+			rs.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+	
+	public ResultSet getAllBook() {
+		ResultSet row=null;
+		loadDriver();
+		Connection cnx =dbConnection();
+		String sql="SELECT * FROM Books";
+		try {
+			PreparedStatement stm=cnx.prepareStatement(sql);
+			row=stm.executeQuery();
+			
+		} catch (SQLException e) {
+	
+			e.printStackTrace();
+		}
+		
+		
+		
+		return row;
+		
+	}
+	
+	public String deleteBook(int bookID) throws SQLException {
+		loadDriver();
+		Connection cnx =dbConnection();
+        String sql = "DELETE FROM Books WHERE ID = ?";
+        try 
+        (PreparedStatement st = cnx.prepareStatement(sql)) {
+            st.setInt(1, bookID);
+            st.executeUpdate();
+        }
+		return null;
+    
+	}
+	// ... (existing code)
+
+	public ResultSet getBookById(int bookId) {
+	    ResultSet row = null;
+	    loadDriver();
+	    Connection cnx = dbConnection();
+	    String sql = "SELECT * FROM Books WHERE ID=?";
+	    try {
+	        PreparedStatement stm = cnx.prepareStatement(sql);
+	        stm.setInt(1, bookId);
+	        row = stm.executeQuery();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return row;
+	}
+
+	public String updateBook(int bookId, String bookName, String bookAuthor, String bookType, String date) {
+	    loadDriver();
+	    Connection cnx = dbConnection();
+	    String sql = "UPDATE Books SET BookName=?, BookAuthor=?, BookType=?, Date=? WHERE ID=?";
+	    try {
+	        PreparedStatement stm = cnx.prepareStatement(sql);
+	        stm.setString(1, bookName);
+	        stm.setString(2, bookAuthor);
+	        stm.setString(3, bookType);
+	        stm.setString(4, date);
+	        stm.setInt(5, bookId);
+	        stm.executeUpdate();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return null;
+	}
+
+	// ... (remaining code)
+
+	
 }
