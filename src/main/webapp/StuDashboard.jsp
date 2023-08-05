@@ -12,7 +12,7 @@
 <div class="left" style="background-color:rgb(36, 31, 49);height: 300px;width:150px;">
 <div class="mainlink"><a href="StuDashboard.jsp">Dashboard</a></div>
 <div class="mainlink"><a href="StuProfile.jsp">My profile</a></div>
-<div class="mainlink"><a href="Bookbrow.jsp">Brow Book</a></div>
+<div class="mainlink"><a href="Lendbook.jsp">Brow Book</a></div>
 <div class="mainlink"><a href="BookReturn.jsp">Book not returned</a></div>
 
 </div>

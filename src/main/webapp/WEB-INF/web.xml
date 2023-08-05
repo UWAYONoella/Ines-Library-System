@@ -49,5 +49,14 @@
     <servlet-name>DeletServlet</servlet-name>
     <url-pattern>/DeletServlet</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>delbookSevlet</display-name>
+    <servlet-name>delbookSevlet</servlet-name>
+    <servlet-class>com.Ines.delbookSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delbookSevlet</servlet-name>
+    <url-pattern>/delbookSevlet</url-pattern>
+  </servlet-mapping>
 </web-app>

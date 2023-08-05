@@ -16,7 +16,6 @@
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
-
         <label for="author">Author:</label>
         <input type="text" id="author" name="author" required><br><br>
 

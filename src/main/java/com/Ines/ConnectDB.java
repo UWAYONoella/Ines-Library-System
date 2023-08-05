@@ -160,7 +160,60 @@ public class ConnectDB {
 	    return null;
 	}
 
-	// ... (remaining code)
+	public String borrowBook(Bookborow user2) {
+		loadDriver();
+		Connection cnx =dbConnection();
+		String sql ="INSERT INTO BorrowedBooks(Faculty,Department,Year,StudentName,StudentID,BookName,LendDate,DueDate) VALUES(?,?,?,?,?,?,?,?)";
+		try {
+			PreparedStatement rs =cnx.prepareStatement(sql);
+			rs.setString(1,user2.getStudentFaculty());
+			rs.setString(2,user2.getStudentDepartment());
+			rs.setString(3,user2.getYear());
+			rs.setString(4,user2.getStudentName());
+			rs.setString(5,user2.getStudentID());
+			rs.setString(6,user2.getBookName());
+			rs.setString(7,user2.getLendDate());
+			rs.setString(8,user2.getDueDate());
+			rs.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+	
+	public ResultSet getBook() {
+		ResultSet row=null;
+		loadDriver();
+		Connection cnx =dbConnection();
+		String sql="SELECT * FROM BorrowedBooks";
+		try {
+			PreparedStatement stm=cnx.prepareStatement(sql);
+			row=stm.executeQuery();
+			
+		} catch (SQLException e) {
+	
+			e.printStackTrace();
+		}
+		
+		
+		
+		return row;
+		
+	}
+	public String deleteBorrowedBook(int bookID) throws SQLException {
+		loadDriver();
+		Connection cnx =dbConnection();
+        String sql = "DELETE FROM BorrowedBooks WHERE ID = ?";
+        try 
+        (PreparedStatement st = cnx.prepareStatement(sql)) {
+            st.setInt(1, bookID);
+            st.executeUpdate();
+        }
+		return null;
+    
+	}
 
 	
 }
