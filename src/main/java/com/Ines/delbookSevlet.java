@@ -47,7 +47,6 @@ public class delbookSevlet extends HttpServlet {
 			}
          
          db.dbConnection();
-         
         
          response.sendRedirect("processLending.jsp");
 	}

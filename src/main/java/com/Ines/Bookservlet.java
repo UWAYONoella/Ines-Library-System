@@ -44,9 +44,11 @@ public class Bookservlet extends HttpServlet {
 		db.dbConnection();
 //		db.addBook(book);
 		String rs= db.addBook(book);
-		if(rs!=null) {
-			response.sendRedirect("Booklist.jsp");
-		}
+		
+		response.sendRedirect("Booklist.jsp");
+		/*
+		 * if(rs!=null) { response.sendRedirect("Booklist.jsp"); }
+		 */
 		
 		
 		ResultSet result=db.getAllBook();

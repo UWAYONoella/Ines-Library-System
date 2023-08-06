@@ -46,7 +46,7 @@
                 <input type="text" class="form-control" id="dueDate" name="dueDate" required>
             </div>
             <button type="submit" class="btn btn-primary" name="action" value="borrow">Borrow</button>
-            <button type="submit" class="btn btn-secondary" name="action" value="return">Return</button>
+            <button type="submit" class="btn btn-secondary" name="action" value="return"><a href="processLending.jsp">book You borrow</a></button>
         </form>
     </div>
 </body>

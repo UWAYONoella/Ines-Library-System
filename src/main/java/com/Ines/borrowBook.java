@@ -49,9 +49,10 @@ public class borrowBook extends HttpServlet {
 		db.dbConnection();
 		/* db.addUser(user); */
 		String rs= db.borrowBook(user2);
-		if(rs!=null) {
-		response.sendRedirect("Booklist.jsp");
-		}
+		response.sendRedirect("processLending.jsp");
+		/*
+		 * if(rs!=null) { response.sendRedirect("processLending.jsp"); }
+		 */
 		
 		ResultSet result=db.getBook();
 		try {
