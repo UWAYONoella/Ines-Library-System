@@ -215,5 +215,18 @@ public class ConnectDB {
     
 	}
 
-	
+	public ResultSet getAllStudents() {
+	    ResultSet rows = null;
+	    loadDriver();
+	    Connection cnx = dbConnection();
+	    String sql = "SELECT * FROM Users"; // Modify the SQL query as needed
+	    try {
+	        PreparedStatement stm = cnx.prepareStatement(sql);
+	        rows = stm.executeQuery();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return rows;
+	}
+
 }

@@ -39,8 +39,8 @@
 <div class="mainlink"><a href="Profile.jsp">My profile</a></div>
 <div class="mainlink"><a href="Booklist.jsp">Books</a></div>
 <div class="mainlink"><a href="processLending.jsp">Books issued</a></div>
-<div class="mainlink"><a href="Regist.jsp">Student registered</a></div>
-<div class="mainlink"><a href="Regist.jsp">Logout</a></div>
+<div class="mainlink"><a href="Students.jsp">Student registered</a></div>
+<div class="mainlink"><a href="index.jsp">Logout</a></div>
 </div>
 <div class="right">
 <h3>Welcome Librarian<hr></hr></h3>
