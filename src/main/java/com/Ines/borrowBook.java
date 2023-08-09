@@ -42,14 +42,14 @@ public class borrowBook extends HttpServlet {
 		String studentName =request.getParameter("studentName");
 		String studentID  =request.getParameter("studentID");
 		String bookName =request.getParameter("bookTitle");
-		String lendDate =request.getParameter("dueDate");
+		String lendDate =request.getParameter("lendDate");
 		String dueDate =request.getParameter("dueDate");
 		Bookborow user2=new Bookborow(studentFaculty,studentDepartment,year,studentName,studentID,bookName,lendDate,dueDate);
 		ConnectDB db =new ConnectDB();
 		db.dbConnection();
 		/* db.addUser(user); */
 		String rs= db.borrowBook(user2);
-		response.sendRedirect("processLending.jsp");
+	    
 		/*
 		 * if(rs!=null) { response.sendRedirect("processLending.jsp"); }
 		 */

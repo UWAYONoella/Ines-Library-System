@@ -37,7 +37,7 @@
   </nav>
 
 
-<div class="container">
+<div class="container" style="height: 77vh;">
 
     <h2>Book List</h2>
 <div class="cont"> <a href="Addbook.jsp">Add new book</a><hr></div>

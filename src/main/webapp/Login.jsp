@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <link rel ="stylesheet" type ="text/css" href="./Sytle.css">
 <title>Ines Library System</title>
+
+
+
 </head>
 <body>
 <form action="Logservlet" method="post">

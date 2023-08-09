@@ -61,7 +61,7 @@ position:fixed;
     </div>
   </nav>
 
-    <div class="container mt-5">
+    <div class="container mt-5" style="height: 65vh;">
         <h1>Lending Data</h1>
         
         <table class="table">
