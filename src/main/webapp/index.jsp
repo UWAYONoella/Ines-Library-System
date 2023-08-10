@@ -7,13 +7,38 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Ines Library System</title>
+
+<style>
+  body {
+    overflow: hidden;
+  }
+
+  .container-scrollable {
+    height: calc(100vh - 56px - 60px); 
+    overflow-y: scroll;
+  }
+ .centered-content {
+    position: relative; 
+    
+    
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+     border-radius: 5px;
+    color: white;
+    text-align: center; 
+  }
+  
+</style>
+
+
+
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
     <div class="container">
       <div class="text-white text-center">
         <h1><a class="navbar-brand" href="#">
-      <img src="https://amarebe.com/wp-content/uploads/2021/08/INES-Ruhengeri-logo-700x426-1-1280x720.png"alt="Ines" style="width:40px;" class="rounded-pill"> 
+      <img src="https://amarebe.com/wp-content/uploads/2021/08/INES-Ruhengeri-logo-700x426-1-1280x720.png"alt="Ines" style="width:70px; height: 80px;" class="rounded-pill"> 
     </a>Welcome to Ines Library</h1>
       </div>
       <ul class="navbar-nav ml-auto">
@@ -33,13 +58,13 @@
     </div>
   </nav>
   
-      <div class="container mt-4">
+      <div class="container-scrollable" > 
        
-        <div class="row">
-            <div class="col-md-8">
+        <div class="centered-content">
+            
                 <h2>Welcome to Ines Library System</h2>
                 <p>Discover a world of knowledge and stories. Browse through our collection of books, both old and new. Join us on a journey of exploration and learning.</p>
-            </div>
+            
         </div>
 
 
@@ -51,6 +76,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
+    
       <img src="https://media.gettyimages.com/id/1149064165/photo/asian-women-are-picking-up-books-on-the-bookshelf-to-prepare-to-back-to-school.jpg?s=612x612&w=0&k=20&c=R15oJfXls8aB9OR4evRFI9ukvyFI6fHKnand6nF0Xqw=" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h1>Your Story Awaits</h1>
@@ -71,7 +97,7 @@
         <h3>Feed your mind's insatiable hunger for learning and exploration.</h3>
       </div>
     </div>
-  </div>
+  
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -81,8 +107,9 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-    <footer class="bg-secondary text-white mt-4 py-3">
+</div>
+</div>
+  <footer class="bg-secondary text-white mt-0 py-3">
         <div class="container text-center">
             <p>&copy; 2023 Ines Library System. All rights reserved.</p>
         </div>

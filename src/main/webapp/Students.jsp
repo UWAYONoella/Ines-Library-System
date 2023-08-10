@@ -21,16 +21,14 @@
     color: white !important;
 }
    .main-container {
-    height: 100vh; /* Adjust as needed */
+    height: 100vh; 
     overflow-y: auto;
   }
 table{
 border-radius: 5px;
 	background-color: #f8f9fa; 
 }
-/* footer{
-position:fixed;
-} */
+
 </style>
 
 </head>
@@ -47,11 +45,12 @@ position:fixed;
         <li class="nav-item">
           <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Home.jsp">Signup</a>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link active" href="Login.jsp"> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Admdashboard.jsp">Logout</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
@@ -60,8 +59,8 @@ position:fixed;
     </div>
   </nav>
 
-    <div class="container mt-5">
-        <h1>Student list</h1>
+    <div class="main-container mt-5">
+        <h1>Students list</h1>
         
         <table class="table">
             <thead>
@@ -110,11 +109,13 @@ position:fixed;
         </table>
         
     </div>
-    
-    <footer class="bg-secondary text-white mt-4 py-3">
+    <div class="foot">
+    <footer class="bg-secondary text-white mt-0 py-4">
         <div class="container text-center">
             <p>&copy; 2023 Ines Library System. All rights reserved.</p>
         </div>
+        
     </footer>
+    </div>
 </body>
 </html>

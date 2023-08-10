@@ -49,7 +49,7 @@ public class Logservlet extends HttpServlet {
 			String role=rs.getString("role");
 			System.out.println(role);
 			if(role.equals("user")) {
-				response.sendRedirect("StuDashboard.jsp");
+				response.sendRedirect("Lendbook.jsp");
 			}else {
 				response.sendRedirect("Admdashboard.jsp");
 			}

@@ -22,7 +22,7 @@ body {
 
 .navbar {
 
-    background-color: #343a40;
+    background-color:rgba(0, 0, 0, 0.5); ;
 }
 
 .navbar-brand img {
@@ -31,6 +31,10 @@ body {
 
 .nav-link {
     color: white !important;
+}
+
+nav a:hover {
+     color: rgb(255, 163, 72);
 }
 
 .main {
@@ -68,17 +72,7 @@ body {
     padding: 20px;
     background-color: #f8f9fa; 
     border-radius: 5px;
-    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); */
 }
-
-.footer {
-position:fixed;
-    width: 100%;
-}
-
-.footer p {
-    margin: 0;
-} 
  
 
 
@@ -86,8 +80,8 @@ position:fixed;
 
 
 </head>
-<body style="background-color:gray;">
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<body>
+<nav class="navbar navbar-expand-sm bg-secondary">
     <div class="container">
       <div class="text-white text-center">
         <h1><a class="navbar-brand" href="#">
@@ -110,7 +104,7 @@ position:fixed;
       </ul>
     </div>
   </nav>
- <div class="container mt-5">
+ <div class="container ">
 <div class="main">
 <div class="left">
 <div class="mainlink"><a href="Profile.jsp">My profile</a></div>
@@ -121,6 +115,9 @@ position:fixed;
 </div>
 <div class="right">
 <h3>Welcome Librarian<hr></hr></h3>
+
+      <img src="https://amarebe.com/wp-content/uploads/2021/08/INES-Ruhengeri-logo-700x426-1-1280x720.png"alt="Ines" style="width:80px; height: 100px;" class="rounded-pill"> <h1 style="padding-left:100px;padding-bottom:70px; font-weight:bolder;font-style:italic; margin-top:-40px;">Help students to boost their Brains</h1>
+     <img src=" https://friendspeaceteams.org/wp-content/uploads/2021/12/Books-Distributed-YoungWoman.jpg">
 </div></div>
 </div>
  <footer class="bg-secondary text-white mt-4 py-3">
@@ -133,5 +130,3 @@ position:fixed;
 </html>
 
 
-<!-- <img alt="library" src="https://www.londonlibrary.co.uk/images/CHARLOTTE/NEW_WEBSITE_IMAGES/LF_Wide_Back_Stacks.jpg">
- -->
