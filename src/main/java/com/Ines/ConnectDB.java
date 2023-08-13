@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 public class ConnectDB {
 	String dburl="jdbc:mysql://localhost:3307/Registration";
 	String dbuser="root";
@@ -228,5 +230,45 @@ public class ConnectDB {
 	    }
 	    return rows;
 	}
+
+	
+	public String updateUser(String name,String email,String username,String role,int id) {
+	 String message = "Success";
+	    loadDriver();
+	    Connection cnx = dbConnection();
+	    String sql = "UPDATE Users SET Names=?,Email=?,Username=?,Role=? WHERE ID=?";
+	    try {
+	        PreparedStatement stm = cnx.prepareStatement(sql);
+	        stm.setString(1, name);
+	        stm.setString(2, email);
+	        stm.setString(3, username);
+	        stm.setString(4, role);
+	        stm.setInt(5, id);
+	        int row = stm.executeUpdate();
+	        if(row>0) {
+	        	JOptionPane.showMessageDialog(null, "User updated");
+	        }
+	        
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        System.out.println(e.getMessage());
+	    }
+	    return message;
+	}
+	
+
+
+public boolean deleteuser(int userID) throws SQLException {
+	loadDriver();
+	Connection cnx =dbConnection();
+    String sql = "DELETE FROM Users WHERE ID = ?";
+    try 
+    (PreparedStatement st = cnx.prepareStatement(sql)) {
+        st.setInt(1, userID);
+        st.executeUpdate();
+    }
+	return true;
+
+}
 
 }

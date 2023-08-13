@@ -54,6 +54,7 @@ padding-left:20px;
 <div class="left" style="background-color:rgb(36, 31, 49);height: 80vh;width:500px;padding-left:2rem;">
 
 <div class="mainlink"><a href="Lendbook.jsp">Brow Book</a></div>
+<div class="mainlink"><a href="findBook.jsp">Search Book</a></div>
 <div class="mainlink"><a href="index.jsp">Logout</a></div>
 
 </div>
@@ -80,7 +81,7 @@ padding-left:20px;
                 <input type="text " class="form-control " id="studentID " name="studentID" required>
          
                 <label for="bookName " class="form-label ">Book Name:</label>
-                <input type="text " class="form-control " id="bookTitle " name="bookTitle" required>
+                <input type="text " class="form-control " id="bookTitle " name="bookTitle"  required>
             
                 <label for="lendDate " class="form-label ">Lend Date:</label>
                 <input type="text " class="form-control " id="lendDate " name="lendDate" required>

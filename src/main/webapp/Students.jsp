@@ -95,7 +95,7 @@ border-radius: 5px;
                     <td><%= rs.getString("Role") %></td>
                     <td><%= rs.getString("status") %></td>
                     <td>
-                        <a href="edit.jsp?id=<%= rs.getString("ID") %>">Edit</a>
+                        <a href="edit.jsp?id=<%= rs.getString("ID") %>&name=<%= rs.getString("Names") %>&email=<%= rs.getString("Email") %>&username=<%= rs.getString("Username") %>&role=<%= rs.getString("Role") %>">Edit</a>
                         <a href="delstudents.jsp?id=<%= rs.getString("ID") %>">Delete</a>
                     </td>
                 </tr>

@@ -46,7 +46,7 @@
           <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Home.jsp">Signup</a>
+          <a class="nav-link" href="Home.jsp"><i class="fa-thin fa-user"></i>Signup</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="Login.jsp"> Login</a>
