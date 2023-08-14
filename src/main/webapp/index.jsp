@@ -27,14 +27,17 @@
     color: white;
     text-align: center; 
   }
-  
+    .nav-link {
+    color: white !important;
+}
+
 </style>
 
 
 
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-secondary">
     <div class="container">
       <div class="text-white text-center">
         <h1><a class="navbar-brand" href="#">
@@ -43,16 +46,19 @@
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
+          <a class="nav-link" href="index.jsp"><i class="fa fa-home"style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; "></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Home.jsp"><i class="fa-thin fa-user"></i>Signup</a>
+          <a class="nav-link" href="Home.jsp"><i class="fa fa-address-book"  style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="Login.jsp"> Login</a>
+          <a class="nav-link active" href="Login.jsp"> <i class="fa fa-sign-in" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#"><i class="fa fa-phone-square" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px;" aria-hidden="true"></i>
+          Contact Us</a>
         </li>
       </ul>
     </div>

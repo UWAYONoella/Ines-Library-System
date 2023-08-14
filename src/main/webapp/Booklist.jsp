@@ -25,7 +25,7 @@ body {
 .cont{
 border: 2px solid white;
 height:40px;
-width:150px;
+width:160px;
 margin-left:20px;
 margin-top:20px;
 }
@@ -48,7 +48,7 @@ border-radius: 5px;
 </head>
 <body>	
 
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-secondary">
     <div class="container">
       <div class="text-white text-center">
         <h1><a class="navbar-brand" href="#">
@@ -57,21 +57,25 @@ border-radius: 5px;
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
+          <a class="nav-link" href="index.jsp"  style="color:white; font-weight:bolder;"><i class="fa fa-home"style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; "></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Home.jsp">Signup</a>
+          <a class="nav-link" href="Home.jsp" style="color:white; font-weight:bolder;" ><i class="fa fa-address-book"  style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="Login.jsp"> Login</a>
+          <a class="nav-link active" href="Login.jsp" style="color:white; font-weight:bolder;" > <i class="fa fa-sign-in" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#" style="color:white; font-weight:bolder;"  ><i class="fa fa-phone-square" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Contact Us</a>
         </li>
       </ul>
     </div>
   </nav>
-<div class="cont"> <a href="Addbook.jsp">Add new book</a><hr></div>
+<div class="cont"> <a href="Addbook.jsp"><i class="fa fa-plus-square" aria-hidden="true"></i>
+Add new book</a><hr></div>
     <div class="container mt-5" style="height: 65vh;">
         <h1> List of Books </h1>
         
@@ -107,9 +111,9 @@ border-radius: 5px;
                     <td><%= rs.getString("Date") %></td>
                     <td>
                     
-        	   <a href="editForm.jsp?id=<%=rs.getInt("ID") %>"> Edit</a>
+        	  <di class="btn" style="height:30px;width:60px;background-color:green;border: 2px solid black;"> <a href="editForm.jsp?id=<%=rs.getInt("ID") %>" style="color:white; font-weight:bolder;text-decoration: none;"> Edit</a></di>
         	   
-        	  <a href="delete.jsp?id=<%=rs.getInt("ID") %>"> Delete</a>
+        	 <di class="btn" style="height:30px;width:70px;background-color:red;border: 2px solid black;">  <a href="delete.jsp?id=<%=rs.getInt("ID") %>" style="color:white;font-weight:bolder;text-decoration: none;" > Delete</a></di>
                     </td>
                 </tr>
                 <%
@@ -122,50 +126,6 @@ border-radius: 5px;
         </table>
         
     </div>
-    <%-- <table border="1">
-    
-        <tr>
-            <th>ID</th>
-            
-            <th>Book-Name</th>
-            <th>Book-Author</th>
-            <th>Book-Type</th>
-            <th>Date</th>
-            <th>Action</th>
-           
-            
-        </tr>
-         <%
-         try{
-           ConnectDB db=new ConnectDB();
-           db.dbConnection();
-           ResultSet rs=db.getAllBook();
-           while(rs.next()){
-        	   %>
-        	   <tr>
-        	   <td><%=rs.getInt("ID") %></td>
-        	 
-        	   <td><%=rs.getString("BookName") %></td>
-        	   <td><%=rs.getString("BookAuthor") %></td>
-        	   <td><%=rs.getString("BookType") %></td>
-        	     <td><%=rs.getString("Date") %></td>
-        	   <td>
-        	   <a href="editForm.jsp?id=<%=rs.getInt("ID") %>"> Edit</a>
-        	   
-        	  <a href="delete.jsp?id=<%=rs.getInt("ID") %>"> Delete</a></td>
-        	   
-        	   </tr>
-        	   <% 
-        	   }
-           
-         }catch(Exception e){
-        	 e.printStackTrace();
-         }
-        	   
-         %> 
- 
-</table>
-</div> --%>
 
 <footer class="bg-secondary text-white mt-4 py-3">
         <div class="container text-center">

@@ -73,8 +73,6 @@ nav a:hover {
     background-color: #f8f9fa; 
     border-radius: 5px;
 }
- 
-
 
 </style>
 
@@ -90,16 +88,19 @@ nav a:hover {
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
+          <a class="nav-link" href="index.jsp"><i class="fa fa-home"style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; "></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Home.jsp">Signup</a>
+          <a class="nav-link" href="Home.jsp"><i class="fa fa-address-book"  style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="Login.jsp"> Login</a>
+          <a class="nav-link active" href="Login.jsp"> <i class="fa fa-sign-in" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#"><i class="fa fa-phone-square" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Contact Us</a>
         </li>
       </ul>
     </div>
@@ -107,11 +108,12 @@ nav a:hover {
  <div class="container ">
 <div class="main">
 <div class="left">
-<div class="mainlink"><a href="Profile.jsp">My profile</a></div>
-<div class="mainlink"><a href="Booklist.jsp">Books</a></div>
-<div class="mainlink"><a href="processLending.jsp">Books issued</a></div>
-<div class="mainlink"><a href="Students.jsp">Student registered</a></div>
-<div class="mainlink"><a href="index.jsp">Logout</a></div>
+<div class="mainlink"><a href="Booklist.jsp"><i class="fa fa-book"style=" font-size:70px; color:white; font-weight:bolder;padding-left:0px;" aria-hidden="true"  ></i>
+Books</a></div>
+<div class="mainlink"><a href="processLending.jsp"><i class="fa fa-leanpub"  style=" font-size:60px; color:white; font-weight:bolder;padding-left:0px;"aria-hidden="true"></i>Books borrowed</a></div>
+<div class="mainlink"><a href="Students.jsp"><i class="fa fa-user-circle-o" style=" font-size:60px; color:white; font-weight:bolder;padding-left:0px;"aria-hidden="true"></i>&nbsp &nbspStudent registered</a></div>
+<div class="mainlink"><a href="index.jsp"><i class="fa fa-sign-out"style=" font-size:70px; color:white; font-weight:bolder;padding-left:0px;margin-button:-60px;" aria-hidden="true"></i>
+Logout</a></div>
 </div>
 <div class="right">
 <h3>Welcome Librarian<hr></hr></h3>

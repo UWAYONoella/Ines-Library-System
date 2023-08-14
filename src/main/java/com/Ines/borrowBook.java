@@ -49,7 +49,7 @@ public class borrowBook extends HttpServlet {
 		db.dbConnection();
 		/* db.addUser(user); */
 		String rs= db.borrowBook(user2);
-	    
+		response.sendRedirect("Lendbook.jsp");
 		/*
 		 * if(rs!=null) { response.sendRedirect("processLending.jsp"); }
 		 */

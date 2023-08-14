@@ -34,7 +34,7 @@ border-radius: 5px;
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-secondary">
     <div class="container">
       <div class="text-white text-center">
         <h1><a class="navbar-brand" href="#">
@@ -43,17 +43,19 @@ border-radius: 5px;
       </div>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>Home</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" href="Login.jsp"> Login</a>
+          <a class="nav-link" href="index.jsp"><i class="fa fa-home"style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; "></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Admdashboard.jsp">Logout</a>
+          <a class="nav-link" href="Home.jsp"><i class="fa fa-address-book"  style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link active" href="Login.jsp"> <i class="fa fa-sign-in" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-phone-square" style=" font-size:30px; color:rgb(36, 31, 49); font-weight:bolder;padding-left:50px; aria-hidden="true"></i>
+          Contact Us</a>
         </li>
       </ul>
     </div>
@@ -95,8 +97,8 @@ border-radius: 5px;
                     <td><%= rs.getString("Role") %></td>
                     <td><%= rs.getString("status") %></td>
                     <td>
-                        <a href="edit.jsp?id=<%= rs.getString("ID") %>&name=<%= rs.getString("Names") %>&email=<%= rs.getString("Email") %>&username=<%= rs.getString("Username") %>&role=<%= rs.getString("Role") %>">Edit</a>
-                        <a href="delstudents.jsp?id=<%= rs.getString("ID") %>">Delete</a>
+                       <div class="btn" style="height:30px;width:60px;background-color:green;border: 2px solid black;"> <a href="edit.jsp?id=<%= rs.getString("ID") %>&name=<%= rs.getString("Names") %>&email=<%= rs.getString("Email") %>&username=<%= rs.getString("Username") %>&role=<%= rs.getString("Role") %>" style="color:white;font-weight:bolder;text-decoration: none;">Edit</a></div>
+                       <di class="btn" style="height:30px;width:70px;background-color:red;border: 2px solid black;"> <a href="delstudents.jsp?id=<%= rs.getString("ID") %>" style="color:white; font-weight:bolder;text-decoration: none;">Delete</a></di>
                     </td>
                 </tr>
                 <%

@@ -60,7 +60,7 @@ padding-left:20px;
         <input type="text" id="bookType" name="bookType" value="<%= bookType %>"><br>
         <label for="date">Date:</label>
         <input type="text" id="date" name="date" value="<%= date %>"><br>
-        <input type="submit" value="Update">
+        <di class="btn" style="margin-top:20px;margin-left:150px;width:100px;background-color:green;border: 2px solid black;"><input type="submit" value="Update"></di>
     </form>
     <%
         }
