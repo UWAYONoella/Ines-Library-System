@@ -108,7 +108,7 @@ position:fixed;
                     <td><%= rs.getString("DueDate") %></td>
                     <td><%= rs.getString("status") %></td>
                     <td>
-                       <div class="btn" style="height:30px;width:60px;background-color:green;border: 2px solid black;"> <a href="editForm.jsp?id=<%= rs.getString("ID") %>" style="color:white; font-weight:bolder;text-decoration: none;">Edit</a></div>
+                       <div class="btn" style="height:30px;width:60px;background-color:green;border: 2px solid black;"> <a href="ediForm.jsp?id=<%= rs.getString("ID") %>&faculty=<%= rs.getString("Faculty") %>&department=<%= rs.getString("Department") %> &year=<%= rs.getString("year") %> &studentName=<%= rs.getString("StudentName") %>&studentID=<%= rs.getString("StudentID") %>&bookTitle=<%= rs.getString("BookName") %>&lendDate=<%= rs.getString("LendDate") %>&dueDate=<%= rs.getString("DueDate") %>&status=<%= rs.getString("status") %>" style="color:white; font-weight:bolder;text-decoration: none;">Edit</a></div>
                        <di class="btn" style="height:30px;width:70px;background-color:red;border: 2px solid black;">  <a href="delbook.jsp?id=<%= rs.getString("ID") %>"  style="color:white;font-weight:bolder;text-decoration: none;">Delete</a></di>
                     </td>
                 </tr>

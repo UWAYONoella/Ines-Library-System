@@ -59,5 +59,4 @@
     <servlet-name>delbookSevlet</servlet-name>
     <url-pattern>/delbookSevlet</url-pattern>
   </servlet-mapping>
-
 </web-app>

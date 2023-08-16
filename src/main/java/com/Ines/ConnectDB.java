@@ -271,4 +271,33 @@ public boolean deleteuser(int userID) throws SQLException {
 
 }
 
+public String updateborrowerdata(int id, String faculty, String department, String year, String studentName, String studentID, String bookTitle, String lendDate, String dueDate, String status) {
+	 String message = "Success";
+	    loadDriver();
+	    Connection cnx = dbConnection();
+	    String sql = "UPDATE BorrowedBooks SET Faculty=?,Department=?,Year=?,StudentName=?,StudentID=?, BookName=? ,LendDate=? ,DueDate=?,status=? WHERE ID=?";
+	    try {
+	        PreparedStatement stm = cnx.prepareStatement(sql);
+	        stm.setString(1, faculty);
+	        stm.setString(2, department);
+	        stm.setString(3, year);
+	        stm.setString(4, studentName);
+	        stm.setString(5, studentID);
+	        stm.setString(6, bookTitle);
+	        stm.setString(7, lendDate);
+	        stm.setString(8, dueDate);
+	        stm.setString(9, status);
+	        stm.setInt(10, id);
+	        int row = stm.executeUpdate();
+	        if(row>0) {
+	        	JOptionPane.showMessageDialog(null, "Well  updated");
+	        }
+	        
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        System.out.println(e.getMessage());
+	    }
+	    return message;
+	}
+
 }
